@@ -4,17 +4,21 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
  #include <stdio.h> 
+int inc(int counter);
+
 int main(void) 
 { 
-	int i;
-	int temp = 1; 
-	for (i=0;i<5;i++) 
-	{ 
-		
-		printf("temp = %d\n", temp); 
-		temp++; 
-	} 
-	return 0; 
+	int i=10; 
+	printf("before i=%d\n", i); 
+	i=inc(i); // 함수의 반환값을 이용, i= 이 없으면 반환 안됨. 
+	printf("after i=%d\n", i); 
+	
+
+}
+int inc(int counter) 
+{ 
+	counter++; 
+	return counter; 
 }
 
 
